@@ -25,7 +25,11 @@ poetry install
 以下のコマンドでツールを実行できます：
 
 ```bash
-poetry run lightrag-fefta
+# RAGの構築
+poetry run build
+
+# クエリの実行
+poetry run query
 ```
 
 ### 開発環境のセットアップ
