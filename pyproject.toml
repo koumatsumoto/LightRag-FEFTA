@@ -33,7 +33,8 @@ include = "lightrag_fefta"
 from = "src"
 
 [tool.poetry.scripts]
-lightrag-fefta = "lightrag_fefta:main"
+build = "lightrag_fefta.build_rag:main"
+query = "lightrag_fefta.query_rag:main"
 
 [tool.black]
 line-length = 88
