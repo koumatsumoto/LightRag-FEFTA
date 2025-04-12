@@ -22,6 +22,9 @@ black = "^25.1.0"
 include = "lightrag_fefta"
 from = "src"
 
+[tool.poetry.scripts]
+lightrag-fefta = "lightrag_fefta:main"
+
 [tool.black]
 line-length = 88
 target-version = ["py310"]
