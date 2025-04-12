@@ -29,7 +29,33 @@ poetry install
 poetry run build
 
 # クエリの実行
-poetry run query
+poetry run query "質問文" [--mode モード]
+
+# ヘルプの表示
+poetry run query --help
+```
+
+#### クエリコマンドのパラメータ
+
+- `query`: 質問文（必須）
+  - 1文字以上の文字列である必要があります
+  - 空文字列や空白文字のみの入力は無効です
+
+- `--mode`: 検索モード（オプション、デフォルト: mix）
+  - 以下のいずれかを指定できます：
+    - naive: ナイーブな検索
+    - local: ローカル検索
+    - global: グローバル検索
+    - hybrid: ハイブリッド検索
+    - mix: 混合検索
+
+使用例：
+```bash
+# 基本的な使用方法
+poetry run query "日本の首都について教えてください"
+
+# モードを指定する場合
+poetry run query "日本の首都について教えてください" --mode naive
 ```
 
 ### 開発環境のセットアップ
