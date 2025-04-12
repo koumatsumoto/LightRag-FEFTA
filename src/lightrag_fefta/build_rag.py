@@ -8,14 +8,10 @@ def main():
     # Initialize RAG instance
     rag = get_rag()
 
-    # サンプルドキュメントを追加
-    documents = [
-        "東京は日本の首都です。",
-        "富士山は日本一高い山です。",
-        "京都には多くの寺社仏閣があります。",
-    ]
-    for doc in documents:
-        rag.insert(doc)
+    # Read document from file
+    with open("data/fefta_20240401.txt", "r", encoding="utf-8") as f:
+        document = f.read()
+        rag.insert(document)
 
     print("RAG index has been built successfully.")
 
