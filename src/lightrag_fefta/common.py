@@ -14,18 +14,20 @@ setup_logger("lightrag", level="INFO")
 # 環境変数のロード
 load_dotenv()
 
+
 async def initialize_rag():
     """Initialize RAG instance."""
     rag = LightRAG(
         working_dir="./lightrag_data",
         embedding_func=openai_embed,
-        llm_model_func=gpt_4o_mini_complete
+        llm_model_func=gpt_4o_mini_complete,
     )
 
     await rag.initialize_storages()
     await initialize_pipeline_status()
 
     return rag
+
 
 def get_rag():
     """Get initialized RAG instance."""
