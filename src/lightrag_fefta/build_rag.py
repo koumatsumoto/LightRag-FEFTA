@@ -9,7 +9,7 @@ def main():
     rag = get_rag()
 
     # Read document from file
-    with open("data/fefta_20240401.txt", "r", encoding="utf-8") as f:
+    with open("input_data/fefta_20240401.txt", "r", encoding="utf-8") as f:
         document = f.read()
         rag.insert(document)
 
